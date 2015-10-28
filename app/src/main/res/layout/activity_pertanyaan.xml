@@ -1,0 +1,56 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    tools:context="com.example.johannes.answer.Pertanyaan">
+
+    <TextView
+        android:id="@+id/asd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:text="kamera dan image menyusul"/>
+
+    <EditText
+        android:id="@+id/caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="15"
+        android:hint="caption"/>
+
+    <Button
+        android:id="@+id/jawaban1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="tambah data"
+        android:onClick="tambahJawaban" />
+    <Button
+        android:id="@+id/jawaban2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="tambah data"
+        android:onClick="tambahJawaban" />
+    <Button
+        android:id="@+id/jawaban3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="tambah data"
+        android:onClick="tambahJawaban" />
+    <Button
+        android:id="@+id/jawaban4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="tambah data"
+        android:onClick="tambahJawaban" />
+
+    <Button
+        android:id="@+id/balik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simpan"
+        android:onClick="onClick"/>
+
+</LinearLayout>
