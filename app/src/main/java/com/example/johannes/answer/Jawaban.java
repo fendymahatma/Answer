@@ -36,6 +36,10 @@ public class Jawaban extends AppCompatActivity {
 
     public void onClick(View view){
         Intent i = new Intent(this, Pertanyaan.class);
+
+        String jawaban = caption.getText().toString();
+        i.putExtra("jawaban", jawaban);
+
         startActivity(i);
     }
 }
