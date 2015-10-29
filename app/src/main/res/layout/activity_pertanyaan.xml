@@ -15,11 +15,11 @@
         android:text="kamera dan image menyusul"/>
 
     <EditText
-        android:id="@+id/caption"
+        android:id="@+id/pertanyaan_awal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="15"
-        android:hint="caption"/>
+        android:hint="(sementara)Masukan pertanyaan setelah jawban terisi"/>
 
     <TextView
         android:id="@+id/caption1"

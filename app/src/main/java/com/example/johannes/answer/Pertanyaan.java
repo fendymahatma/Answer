@@ -24,6 +24,8 @@ public class Pertanyaan extends AppCompatActivity {
     EditText caption;
     ArrayList<String> dataJawaban;
     ArrayList<String> dataCaption;
+    ArrayList<Integer> dataBenarSalah;
+    EditText pertanyaan_awal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,7 @@ public class Pertanyaan extends AppCompatActivity {
         jawaban4 = (Button) findViewById(R.id.jawaban4);
         caption4 = (TextView) findViewById(R.id.caption4);
         balik = (Button) findViewById(R.id.balik);
+        pertanyaan_awal = (EditText) findViewById(R.id.pertanyaan_awal);
 
         Bundle data = getIntent().getExtras();
         if (data == null) {
@@ -54,23 +57,27 @@ public class Pertanyaan extends AppCompatActivity {
         if (dataCaption == null) {
             dataCaption = new ArrayList<>();
         }
+        dataBenarSalah = data.getIntegerArrayList("dataBenarSalah");
+        if (dataBenarSalah == null) {
+            dataBenarSalah = new ArrayList<>();
+        }
 
 
         if (dataJawaban.size() >= 1 && dataCaption.size() >=1) {
             caption1.setText(dataCaption.get(0));
-            jawaban1.setText(dataJawaban.get(0));
+            jawaban1.setText(dataJawaban.get(0)+" "+dataBenarSalah.get(0));
             jawaban1.setEnabled(false);
             if (dataJawaban.size() >= 2 && dataCaption.size() >=2) {
                 caption2.setText(dataCaption.get(1));
-                jawaban2.setText(dataJawaban.get(1));
+                jawaban2.setText(dataJawaban.get(1)+" "+dataBenarSalah.get(1));
                 jawaban2.setEnabled(false);
                 if (dataJawaban.size() >= 3  && dataCaption.size() >=3) {
                     caption3.setText(dataCaption.get(2));
-                    jawaban3.setText(dataJawaban.get(2));
+                    jawaban3.setText(dataJawaban.get(2)+" "+dataBenarSalah.get(2));
                     jawaban3.setEnabled(false);
                     if (dataJawaban.size() >= 4  && dataCaption.size() >=4){
                         caption4.setText(dataCaption.get(3));
-                        jawaban4.setText(dataJawaban.get(3));
+                        jawaban4.setText(dataJawaban.get(3)+" "+dataBenarSalah.get(3));
                         jawaban4.setEnabled(false);
                     }
                 }
@@ -82,6 +89,13 @@ public class Pertanyaan extends AppCompatActivity {
 
     public void onClick(View view) {
         Intent i = new Intent(this, MainActivity.class);
+
+        i.putExtra("dataCaption", dataCaption);
+        i.putExtra("dataJawaban", dataJawaban);
+        i.putExtra("dataBenarSalah", dataBenarSalah);
+        String pertanyaan = pertanyaan_awal.getText().toString();
+        i.putExtra("pertanyaan_awal", pertanyaan);
+
         startActivity(i);
     }
 
@@ -90,18 +104,9 @@ public class Pertanyaan extends AppCompatActivity {
 
         in.putExtra("dataCaption", dataCaption);
         in.putExtra("dataJawaban", dataJawaban);
+        in.putExtra("dataBenarSalah", dataBenarSalah);
 
         startActivity(in);
     }
 
 }
-
-        /*if (jawaban1.getText().equals("tambah data")) {
-            jawaban1.setText(dataText);
-        } else if (jawaban2.getText().equals("tambah data")) {
-            jawaban2.setText(dataText);
-        } else if (jawaban3.getText().equals("tambah data")) {
-            jawaban3.setText(dataText);
-        } else if (jawaban4.getText().equals("tambah data")) {
-            jawaban4.setText(dataText);
-        }*/

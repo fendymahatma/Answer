@@ -10,28 +10,45 @@
         android:id="@+id/pertanyaanke"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:text="Ini Pertanyaan ke "/>
+        android:text="Ini Pertanyaan ke "
+        android:textSize="25dp" />
 
     <EditText
         android:id="@+id/caption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="15"
-        android:hint="caption"/>
+        android:hint="caption" />
 
     <EditText
         android:id="@+id/jawaban"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="15"
-        android:hint="jawaban"/>
+        android:hint="jawaban" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radio_benar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Benar" />
+
+        <RadioButton
+            android:id="@+id/radio_salah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salah" />
+    </RadioGroup>
 
     <Button
         android:id="@+id/tambah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tambah"
-        android:onClick="onClick"/>
+        android:onClick="onClick"
+        android:text="Tambah" />
 
 </LinearLayout>

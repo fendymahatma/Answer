@@ -1,5 +1,4 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,35 +10,87 @@
         android:id="@+id/tabah_data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="tambah data"
-        android:onClick="onClick"/>
+        android:onClick="onClickTambah"
+        android:text="tambah data" />
 
-    <TextView
-        android:id="@+id/pertanyaan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="17dp"
-        android:layout_marginTop="25dp"
-        android:text="Pertanyaan"/>
+    <LinearLayout
+        android:id="@+id/pertanyaan_depan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_blue_light"
+        android:orientation="vertical"
+        android:visibility="gone">
 
-    <Button
-        android:id="@+id/jawaban1"
+        <TextView
+            android:id="@+id/pertanyaan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Pertanyaan"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/jawaban1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="data" />
+
+        <Button
+            android:id="@+id/jawaban2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="data" />
+
+        <Button
+            android:id="@+id/jawaban3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="data" />
+
+        <Button
+            android:id="@+id/jawaban4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="data" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/jawaban_depan"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="data"/>
-    <Button
-        android:id="@+id/jawaban2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="data"/>
-    <Button
-        android:id="@+id/jawaban3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="data"/>
-    <Button
-        android:id="@+id/jawaban4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="data"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/caption_terpilih"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Caption benar"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/jawaban_terpilih"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Jawaban benar"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/kembali_depan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickKembaliDepan"
+            android:text="kembbali ke pertanyan" />
+
+    </LinearLayout>
+
 </LinearLayout>
