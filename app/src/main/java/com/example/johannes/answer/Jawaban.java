@@ -8,12 +8,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class Jawaban extends AppCompatActivity {
 
     TextView pertanyaanke;
     EditText caption;
     EditText jawaban;
     Button tambah;
+    ArrayList<String> dataJawaban;
+    ArrayList<String> dataCaption;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,16 +33,25 @@ public class Jawaban extends AppCompatActivity {
         if(data == null){
             return;
         }
-        String dataText = data.getString("data");
-        pertanyaanke.setText(dataText);
+
+        dataJawaban = data.getStringArrayList("dataJawaban");
+        if(dataJawaban == null) {
+            dataJawaban = new ArrayList<>();
+        }
+        dataCaption = data.getStringArrayList("dataCaption");
+        if(dataCaption == null) {
+            dataCaption = new ArrayList<>();
+        }
 
     }
 
     public void onClick(View view){
         Intent i = new Intent(this, Pertanyaan.class);
 
-        String jawaban = caption.getText().toString();
-        i.putExtra("jawaban", jawaban);
+        dataCaption.add(caption.getText().toString());
+        i.putExtra("dataCaption", dataCaption);
+        dataJawaban.add(jawaban.getText().toString());
+        i.putExtra("dataJawaban", dataJawaban);
 
         startActivity(i);
     }

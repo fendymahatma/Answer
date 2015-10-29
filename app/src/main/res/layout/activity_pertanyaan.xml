@@ -21,24 +21,43 @@
         android:ems="15"
         android:hint="caption"/>
 
+    <TextView
+        android:id="@+id/caption1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
     <Button
         android:id="@+id/jawaban1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="tambah data"
         android:onClick="tambahJawaban" />
+
+    <TextView
+        android:id="@+id/caption2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
     <Button
         android:id="@+id/jawaban2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="tambah data"
         android:onClick="tambahJawaban" />
+
+    <TextView
+        android:id="@+id/caption3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
     <Button
         android:id="@+id/jawaban3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="tambah data"
         android:onClick="tambahJawaban" />
+
+    <TextView
+        android:id="@+id/caption4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
     <Button
         android:id="@+id/jawaban4"
         android:layout_width="match_parent"
